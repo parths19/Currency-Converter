@@ -1,0 +1,418 @@
+/* style.css */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at center, #1e3c72, #2a5298, #121212);
+    color: #fff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    padding: 0 20px;
+    animation: backgroundAnimation 8s infinite alternate;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background: radial-gradient(circle at center, #1e3c72, #2a5298, #121212);
+    }
+    100% {
+        background: radial-gradient(circle at center, #1c1b3a, #3e0069, #121212);
+    }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), 0 0 20px 5px rgba(255, 203, 5, 0.5);
+    text-align: center;
+    max-width: 450px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(#ffcb05, #ffffff, #ffcb05);
+    animation: rotateGradient 5s linear infinite;
+    z-index: -1;
+    filter: blur(50px);
+}
+
+@keyframes rotateGradient {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    color: #ffcb05;
+    text-shadow: 0 0 15px rgba(255, 203, 5, 0.8);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.amount p,
+.from p,
+.to p {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.amount input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #000;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s;
+}
+
+.amount input:focus {
+    outline: none;
+    box-shadow: 0 0 10px #ffcb05, inset 0 0 10px rgba(255, 203, 5, 0.5);
+}
+
+.dropdown {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.from, .to {
+    flex: 1;
+}
+
+.select-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 12px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    transition: box-shadow 0.3s;
+}
+
+.select-container:hover {
+    box-shadow: 0 0 15px #ffcb05;
+}
+
+.select-container img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+select {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    color: #000;
+    transition: background 0.3s;
+}
+
+select:focus {
+    outline: none;
+    background: #ffcb05;
+    color: #fff;
+}
+
+.fa-arrow-right-arrow-left {
+    font-size: 1.8rem;
+    color: #ffcb05;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out, color 0.3s;
+    text-shadow: 0 0 10px rgba(255, 203, 5, 0.8);
+}
+
+.fa-arrow-right-arrow-left:hover {
+    transform: rotate(360deg);
+    color: #ffd700;
+}
+
+.msg {
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 12px;
+    border-radius: 10px;
+    text-shadow: 0 0 10px rgba(255, 203, 5, 0.5);
+}
+
+button {
+    background: linear-gradient(135deg, #ffcb05, #ffd700);
+    color: #333;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 203, 5, 0.6);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ffd700, #ffcb05);
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(255, 203, 5, 0.8);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .fa-arrow-right-arrow-left {
+        font-size: 1.5rem;
+    }
+
+    select, input {
+        font-size: 0.9rem;
+    }
+}
+/* style.css */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at center, #1e3c72, #2a5298, #121212);
+    color: #fff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    padding: 0 20px;
+    animation: backgroundAnimation 8s infinite alternate;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background: radial-gradient(circle at center, #1e3c72, #2a5298, #121212);
+    }
+    100% {
+        background: radial-gradient(circle at center, #1c1b3a, #3e0069, #121212);
+    }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), 0 0 20px 5px rgba(255, 203, 5, 0.5);
+    text-align: center;
+    max-width: 450px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(#ffcb05, #ffffff, #ffcb05);
+    animation: rotateGradient 5s linear infinite;
+    z-index: -1;
+    filter: blur(50px);
+}
+
+@keyframes rotateGradient {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    color: #ffcb05;
+    text-shadow: 0 0 15px rgba(255, 203, 5, 0.8);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.amount p,
+.from p,
+.to p {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.amount input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #000;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s;
+}
+
+.amount input:focus {
+    outline: none;
+    box-shadow: 0 0 10px #ffcb05, inset 0 0 10px rgba(255, 203, 5, 0.5);
+}
+
+.dropdown {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.from, .to {
+    flex: 1;
+}
+
+.select-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 12px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    transition: box-shadow 0.3s;
+}
+
+.select-container:hover {
+    box-shadow: 0 0 15px #ffcb05;
+}
+
+.select-container img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+select {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    color: #000;
+    transition: background 0.3s;
+}
+
+select:focus {
+    outline: none;
+    background: #ffcb05;
+    color: #fff;
+}
+
+.fa-arrow-right-arrow-left {
+    font-size: 1.8rem;
+    color: #ffcb05;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out, color 0.3s;
+    text-shadow: 0 0 10px rgba(255, 203, 5, 0.8);
+}
+
+.fa-arrow-right-arrow-left:hover {
+    transform: rotate(360deg);
+    color: #ffd700;
+}
+
+.msg {
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 12px;
+    border-radius: 10px;
+    text-shadow: 0 0 10px rgba(255, 203, 5, 0.5);
+}
+
+button {
+    background: linear-gradient(135deg, #ffcb05, #ffd700);
+    color: #333;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 203, 5, 0.6);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ffd700, #ffcb05);
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(255, 203, 5, 0.8);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .fa-arrow-right-arrow-left {
+        font-size: 1.5rem;
+    }
+
+    select, input {
+        font-size: 0.9rem;
+    }
+}
