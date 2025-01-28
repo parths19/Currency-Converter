@@ -41,14 +41,6 @@ Follow these steps to run the project locally:
 - **Enter the amount to convert.**
 - **View the converted amount instantly!**
 
-## Folder Structure 📂
-currency-converter/
-│
-├── index.html        # Main HTML file
-├── style.css         # CSS styles
-├── script.js         # JavaScript logic
-└── README.md         # Project documentation
-
 ## Contributing 🤝
 Contributions are welcome!
 
